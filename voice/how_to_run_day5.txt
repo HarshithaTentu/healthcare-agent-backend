@@ -1,0 +1,13 @@
+Run Day 5 voice pipeline:
+
+1) From project root:
+   cd ~/healthcare-agent-backend
+
+2) Run voice agent:
+   python3 -m voice.voice_agent
+
+Expected:
+- listens to mic
+- STT (or fallback)
+- agent logs tool decision
+- plays TTS response

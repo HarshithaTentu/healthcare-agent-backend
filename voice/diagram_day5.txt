@@ -1,0 +1,16 @@
+DAY 5: Voice Pipeline (Batch)
+
+🎤 Microphone Audio
+   ↓ (record full audio)
+STT: SpeechRecognition (Google STT)
+   ↓ (text)
+"What is fever?"
+   ↓
+Agent (Day 4)
+- Intent: KNOWLEDGE_QUERY
+- Tool: KNOWLEDGE_SEARCH
+- Tool result → response text
+   ↓
+TTS: gTTS
+   ↓
+🔊 Speaker Playback (afplay)

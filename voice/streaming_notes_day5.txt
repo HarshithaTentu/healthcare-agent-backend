@@ -1,0 +1,13 @@
+Batch audio:
+- Record full audio first, then send to STT
+- Higher latency because processing starts after recording ends
+
+Streaming audio:
+- Send audio in small chunks continuously
+- STT returns partial transcripts in real time
+- Can start generating response earlier (lower perceived latency)
+
+Latency sources:
+- STT network call
+- Agent processing
+- TTS generation + audio playback
