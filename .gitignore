@@ -1,12 +1,6 @@
-# Virtual environment
-.venv/
-
-# Python cache
+venv/
 __pycache__/
-*.pyc
-
-# macOS files
+.env
 .DS_Store
-
-# Logs
+*.pyc
 *.log
