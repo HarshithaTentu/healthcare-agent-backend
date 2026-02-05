@@ -4,3 +4,8 @@ __pycache__/
 .DS_Store
 *.pyc
 *.log
+*.mp3
+*.wav
+*.save
+*_backup_*.py
+response_*.mp3
