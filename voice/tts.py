@@ -1,18 +1,17 @@
-from gtts import gTTS
-import os
 import time
+from gtts import gTTS
 
-def speak(text: str):
-    filename = f"response_{int(time.time())}.mp3"
 
-    print("🔊 Converting text to speech...")
+def speak(text: str, filename: str = "response.mp3") -> str:
+    """
+    Converts text to speech and logs TTS time.
+    """
+    start = time.perf_counter()
+
     tts = gTTS(text=text)
     tts.save(filename)
 
-    print("▶️ Playing audio...")
-    os.system(f"afplay {filename}")
+    tts_ms = (time.perf_counter() - start) * 1000
+    print(f"⏱️ TTS timing | tts_ms={tts_ms:.2f}, text_len={len(text)}")
 
-    try:
-        os.remove(filename)
-    except Exception:
-        pass
+    return filename
