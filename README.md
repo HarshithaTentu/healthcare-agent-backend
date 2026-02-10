@@ -59,6 +59,20 @@ http://127.0.0.1:8000/docs
 • Implemented backend knowledge retrieval  
 • Understood backend and AI integration workflows  
 
+## ⏱️ Voice Pipeline Latency (Sample)
+
+Measured on local machine using offline Whisper + gTTS.
+
+- STT (recording + transcription): ~6–10s
+- Backend API call (FastAPI): ~15ms
+- TTS (gTTS): ~1.8–2.0s
+- End-to-end voice pipeline: ~8–12s
+
+**Observation:**  
+Most latency comes from audio processing (STT + TTS).  
+The agent backend itself is fast, confirming audio as the primary bottleneck.
+
+
 --------------------------------------------------
 
 👩‍💻 Author
