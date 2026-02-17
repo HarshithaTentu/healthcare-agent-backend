@@ -9,3 +9,4 @@ __pycache__/
 *.save
 *_backup_*.py
 response_*.mp3
+.venv/
